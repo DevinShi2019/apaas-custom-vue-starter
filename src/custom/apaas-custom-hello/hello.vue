@@ -1,13 +1,13 @@
 <template>
-  <div class="hello">
+  <div class="{{moduleName}}">
     这里是自开发界面
-    <img src="/custom/hello/1.jpg" />
+    <img src="/custom/{{moduleName}}/1.jpg" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ApaasCustomHello',
+  name: 'ApaasCustom{{ModuleName}}',
   data: function() {
     return {
     }

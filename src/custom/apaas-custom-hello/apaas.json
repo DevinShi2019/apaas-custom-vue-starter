@@ -1,14 +1,14 @@
 {
   "entry": "index.js",
-  "copyAssets": ["public/custom/hello"],
+  "copyAssets": ["public/custom/{{moduleName}}"],
   "router": {
-    "apaas-custom-hello": {
-      "name": "apaas-custom-hello",
-      "path": "apaas-custom-hello",
+    "apaas-custom-{{moduleName}}": {
+      "name": "apaas-custom-{{moduleName}}",
+      "path": "apaas-custom-{{moduleName}}",
       "meta": {
-        "title": "自开发Hello"
+        "title": "自开发{{ModuleName}}"
       }
     }
   },
-  "outputName": "apaas-custom-hello"
+  "outputName": "apaas-custom-{{moduleName}}"
 }

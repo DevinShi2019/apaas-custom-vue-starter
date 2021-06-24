@@ -69,5 +69,5 @@ const lib = async (cmd, program) => {
 }
 
 module.exports = lib({
-  custom: 'apaas-custom-hello'
+  custom: 'apaas-custom-{{moduleName}}'
 }, {})
