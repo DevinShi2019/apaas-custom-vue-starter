@@ -1,0 +1,18 @@
+@import './app-variable.scss';
+
+/* Color-------------------------- */
+$--color-primary: $--app-primary-color;
+
+$--border-radius-base: $--app-border-radius;
+
+$--size-base: $--app-font-size ;
+
+$--input-height: 32px;
+
+$--button-border-radius: $--app-border-radius;
+
+$--button-medium-border-radius: $--app-border-radius;
+
+$--button-small-border-radius: $--app-border-radius;
+
+$--button-mini-border-radius: $--app-border-radius;

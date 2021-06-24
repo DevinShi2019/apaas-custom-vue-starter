@@ -1,0 +1,26 @@
+/**
+ * @description: 如果font-size为10的话，则使用缩放处理
+ * @param {type} 
+ * @return: 
+ */
+@mixin fontSize($fontSize) {
+    @if $fontSize == 10px {
+        font-size: 12px;
+        transform: scale(.83);
+    } @else {
+        font-size: $fontSize;
+    }
+}
+
+/**
+ * @description: 把图形变成圆形
+ * @param {type} 
+ * @return: 
+ */
+@mixin circleShape($width) {
+    width: $width;
+    min-width: $width;
+    height: $width;
+    min-height: $width;
+    border-radius: 50%;
+}

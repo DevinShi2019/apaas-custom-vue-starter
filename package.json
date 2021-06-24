@@ -1,0 +1,84 @@
+{
+  "name": "x-project-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "inspect": "vue-cli-service inspect",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint --fix",
+    "cm": "git-cz"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "dayjs": "^1.8.27",
+    "element-ui": "^2.13.2",
+    "js-file-download": "^0.4.12",
+    "md5": "^2.3.0",
+    "normalize.css": "^8.0.1",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3",
+    "vuex-persist": "^2.2.0",
+    "@x-ui/x-dcloud-ui": "^0.2.1"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@vue/cli-plugin-babel": "^4.3.0",
+    "@vue/cli-plugin-e2e-nightwatch": "^4.3.0",
+    "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-plugin-pwa": "^4.3.0",
+    "@vue/cli-plugin-router": "^4.3.0",
+    "@vue/cli-plugin-unit-jest": "^4.3.0",
+    "@vue/cli-plugin-vuex": "^4.3.0",
+    "@vue/cli-service": "^4.3.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.31",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "chromedriver": "81",
+    "colors": "^1.4.0",
+    "commitizen": "^4.1.2",
+    "commitlint-config-cz": "^0.13.1",
+    "conventional-changelog-cli": "^2.0.34",
+    "cz-conventional-changelog": "^3.2.0",
+    "cz-customizable": "^6.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "geckodriver": "^1.19.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.12.0",
+    "path": "^0.12.7",
+    "prettier": "^1.19.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^8.0.2",
+    "sass-resources-loader": "^2.0.3",
+    "shelljs": "^0.8.4",
+    "svg-sprite-loader": "^5.0.0",
+    "vue-i18n": "^8.17.7",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-theme-color-replacer": "^1.3.13",
+    "zip-local": "^0.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint --fix",
+      "git add"
+    ]
+  }
+}
