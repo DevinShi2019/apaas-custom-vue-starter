@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'ApaasCustom{{ModuleName}}',
+  name: 'ApaasCustomModuleName',
   data: function() {
     return {
     }
