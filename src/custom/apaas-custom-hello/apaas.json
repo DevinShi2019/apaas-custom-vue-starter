@@ -1,6 +1,6 @@
 {
   "entry": "index.js",
-  "copyAssets": ["public/custom/{{moduleName}}"],
+  "copyAssets": ["public/custom/apaas-custom-{{moduleName}}"],
   "router": {
     "apaas-custom-{{moduleName}}": {
       "name": "apaas-custom-{{moduleName}}",

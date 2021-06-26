@@ -1,7 +1,7 @@
 <template>
   <div class="{{moduleName}}">
     这里是自开发界面
-    <img src="/custom/apaas-custom-{{moduleName}}/1.jpg" />
+    <img src="/app/custom/apaas-custom-{{moduleName}}/1.jpg" />
   </div>
 </template>
 
