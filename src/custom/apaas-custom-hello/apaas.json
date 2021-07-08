@@ -10,5 +10,11 @@
       }
     }
   },
+  "customWidgetList": [
+    {
+      "code": "{{moduleName}}",
+      "text": "{{moduleName}}"
+    }
+  ],
   "outputName": "apaas-custom-{{moduleName}}"
 }
