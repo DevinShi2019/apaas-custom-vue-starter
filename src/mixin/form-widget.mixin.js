@@ -1,21 +1,5 @@
-import WidgetRequiredValidator from '../form-validator/widget-required-validator'
+import WidgetRequiredValidator from '@/validator/widget-required-validator'
 import debounce from 'lodash-es/debounce'
-
-/**
- * Validate whether given map is valid or not
- * @param {*} map
- * @return {Boolean}
- */
-
-function normalizeMap(map) {
-  return Array.isArray(map)
-    ? map.map(function(key) {
-      return { key: key, val: key }
-    })
-    : Object.keys(map).map(function(key) {
-      return { key: key, val: map[key] }
-    })
-}
 
 const FormWidgetConfigMixin = {
   data() {

@@ -46,17 +46,23 @@ const init = (cmd, program) => {
   const demoCustomModuleName = 'hello'
   const demoCustomModulePath = path.resolve(customPath, `apaas-custom-${demoCustomModuleName}`)
 
-  const customModuleFileNames = fs.readdirSync(demoCustomModulePath)
+  const writeAndReplaceFileSync = (filePath) => {
+    const stat = fs.lstatSync(filePath)
+    if (stat.isDirectory()) {
+      const customModuleFileNames = fs.readdirSync(filePath)
+      customModuleFileNames.forEach(fileName => {
+        const tempFilePath = path.join(filePath, fileName)
+        writeAndReplaceFileSync(tempFilePath)
+      })
+    } else {
+      let fileContent = fs.readFileSync(filePath, 'utf-8')
+      fileContent = fileContent.replace(/{{moduleName}}/g, moduleName)
+      fileContent = fileContent.replace(/{{ModuleName}}/g, moduleName.charAt(0).toUpperCase() + moduleName.slice(1))
+      fs.writeFileSync(filePath, fileContent)
+    }
+  }
 
-  console.log(customModuleFileNames)
-  customModuleFileNames.forEach(fileName => {
-    const filePath = path.join(demoCustomModulePath, fileName);
-    let fileContent = fs.readFileSync(filePath, 'utf-8')
-    fileContent = fileContent.replace(/{{moduleName}}/g, moduleName)
-    fileContent = fileContent.replace(/{{ModuleName}}/g, moduleName.charAt(0).toUpperCase() + moduleName.slice(1))
-    
-    fs.writeFileSync(filePath, fileContent)
-  })
+  writeAndReplaceFileSync(demoCustomModulePath)
 
   fs.renameSync(demoCustomModulePath, path.resolve(customPath, `apaas-custom-${moduleName}`))
   fs.renameSync(path.resolve(staticPath, `apaas-custom-${demoCustomModuleName}`), path.resolve(staticPath, `apaas-custom-${moduleName}`))
