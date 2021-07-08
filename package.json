@@ -16,6 +16,7 @@
     "dayjs": "^1.8.27",
     "element-ui": "^2.13.2",
     "js-file-download": "^0.4.12",
+    "lodash-es": "^4.17.21",
     "md5": "^2.3.0",
     "normalize.css": "^8.0.1",
     "register-service-worker": "^1.7.1",
