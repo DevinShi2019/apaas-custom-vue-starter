@@ -22,7 +22,7 @@ const install = function(Vue, opts) {
       const compConfig = {
         widgetConfig
       }
-      Vue.FormEngine.registerCustomComponentConfig(compConfig)
+      Vue.FormEngine && Vue.FormEngine.registerCustomComponentConfig(compConfig)
     })
   }
 }
