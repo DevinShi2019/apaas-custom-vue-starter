@@ -76,10 +76,10 @@ import {
   Backtop,
   PageHeader,
   CascaderPanel,
-  // Loading,
+  Loading,
   MessageBox,
-  Message
-  // Notification
+  Message,
+  Notification
 } from 'element-ui'
 
 Vue.use(Pagination)
@@ -158,12 +158,12 @@ Vue.use(Backtop)
 Vue.use(PageHeader)
 Vue.use(CascaderPanel)
 
-// Vue.use(Loading.directive)
+Vue.use(Loading.directive)
 
-// Vue.prototype.$loading = Loading.service
+Vue.prototype.$loading = Loading.service
 Vue.prototype.$msgbox = MessageBox
-// Vue.prototype.$alert = MessageBox.alert
+Vue.prototype.$alert = MessageBox.alert
 Vue.prototype.$confirm = MessageBox.confirm
 Vue.prototype.$prompt = MessageBox.prompt
-// Vue.prototype.$notify = Notification
+Vue.prototype.$notify = Notification
 Vue.prototype.$message = Message
