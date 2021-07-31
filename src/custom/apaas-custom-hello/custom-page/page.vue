@@ -81,6 +81,13 @@
               @click.stop="handleRowDetail(row)"
               >详情</a
             >
+            <span style="width: 4px; display: inline-block"></span>
+            <a
+              href="javascript:void(0)"
+              class="el-link el-link--primary"
+              @click.stop="handleRowEdit(row)"
+              >编辑</a
+            >
           </div>
           <div v-if="colConfig.customSlot === 'status'" :key="index + '' + rowIndex">
             <span
@@ -113,6 +120,7 @@ import SearchNumber from '../../common/search-components/search-number.vue'
 import SearchSelect from '../../common/search-components/search-select.vue'
 
 import DetailDrawer from './detail-drawer.vue'
+import EditModal from './edit-modal.vue'
 
 export default {
   name: 'ApaasCustom{{ModuleName}}',
@@ -121,7 +129,8 @@ export default {
     SearchDate,
     SearchNumber,
     SearchSelect,
-    DetailDrawer
+    DetailDrawer,
+    EditModal
   },
   data: function() {
     return {
@@ -209,6 +218,9 @@ export default {
     },
     handleRowDetail(row) {
       this.$refs.detailDrawer.showDrawer()
+    },
+    handleRowEdit(row) {
+      this.$refs.editModal.showModal()
     },
     currentChange(currentPage) {
       this.pagination.currentPage = currentPage
