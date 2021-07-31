@@ -9,12 +9,9 @@
 export default {
   name: 'ApaasCustomModuleName',
   data: function() {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
