@@ -110,6 +110,7 @@
       </x-vxe-table>
     </div>
     <detail-drawer ref="detailDrawer"></detail-drawer>
+    <edit-modal ref="editModal"></edit-modal>
   </div>
 </template>
 
