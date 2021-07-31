@@ -34,7 +34,7 @@
 <script>
 import BaseHeader from '@/components/base-header'
 import BaseMenuTree from '@/components/base-menu-tree'
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'DefaultLayout',
@@ -83,7 +83,8 @@ export default {
               icon: 'yonghuguanli'
             }
           ]
-        }, {
+        },
+        {
           index: 'config-zikaifa',
           name: '自开发',
           icon: 'peizhiguanli',
@@ -137,13 +138,14 @@ export default {
   }
   .admin__menu {
     position: relative;
+    z-index: 100;
     .base-menu-tree {
       height: 100%;
     }
   }
   .admin__main {
     flex: 1;
-    padding-left: 20px;
+    // padding-left: 20px;
     overflow: hidden;
   }
 
