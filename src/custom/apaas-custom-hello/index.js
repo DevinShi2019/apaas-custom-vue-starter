@@ -1,6 +1,6 @@
-import ApaasCustom{{ModuleName}} from './page.vue'
-import { customFormComponentList } from './form-component'
-import { widgetConfigList } from './form-config'
+import ApaasCustom{{ModuleName}} from './custom-page/page.vue'
+import { customFormComponentList } from './custom-component/form-component'
+import { widgetConfigList } from './custom-component/form-config'
 
 const install = function(Vue, opts) {
   // 安装{{ModuleName}}模块, 此处的和apaas.json定义的路由，必须一致

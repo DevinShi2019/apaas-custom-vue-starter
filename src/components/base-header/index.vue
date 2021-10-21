@@ -74,7 +74,7 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 100;
+  z-index: 101;
   height: 64px;
   box-shadow: $--app-box-shadow;
   background-color: $--app-light-color;
