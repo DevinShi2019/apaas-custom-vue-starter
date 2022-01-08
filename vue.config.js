@@ -22,7 +22,11 @@ module.exports = {
   assetsDir: 'public',
   lintOnSave: isProd(),
   productionSourceMap: false,
-  transpileDependencies: ['@x-ui/x-dcloud-ui'],
+  transpileDependencies: [
+    '@x-ui/x-dcloud-ui',
+    '@x-apaas/x-lib-rule-engine',
+    '@x-apaas/x-dcloud-page-web'
+  ],
   runtimeCompiler: true,
   // webpack-dev-server 相关配置
   devServer: {

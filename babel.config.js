@@ -25,6 +25,19 @@ const XLibComponentPlugin = [
   '@x-ui/x-dcloud-ui'
 ]
 
+const XDcloudPageWebPlugin = [
+  'component',
+  {
+    libraryName: '@x-apaas/x-dcloud-page-web',
+    styleLibrary: {
+      base: false,
+      name: 'theme-chalk/theme'
+    },
+    ext: '.scss'
+  },
+  '@x-apaas/x-dcloud-page-web'
+]
+
 module.exports = {
   presets: [
     [
@@ -36,6 +49,7 @@ module.exports = {
   ],
   plugins: [
     elementUIComponentPlugin,
-    XLibComponentPlugin
+    XLibComponentPlugin,
+    XDcloudPageWebPlugin
   ]
 }

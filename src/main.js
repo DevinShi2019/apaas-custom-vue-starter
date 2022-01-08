@@ -7,7 +7,7 @@
  * @FilePath: /x-product-workspace/packages/x-project-app/src/main.js
  */
 import './assets/scss/index.scss'
-
+import './vendor/extension-plugin'
 import Vue from 'vue'
 import App from './App.vue'
 // import './registerServiceWorker'
@@ -20,6 +20,7 @@ import './vendor/x-lib-ui'
 import '@/router/auth.guard'
 import './icons' // icon
 import './plugins'
+import './vendor/x-dcloud-layout-engine/x-dcloud-layout-engine'
 
 Vue.prototype.$envUrl = function(url) {
   return `${process.env.VUE_APP_PUBLIC_PATH}${url}`

@@ -89,6 +89,11 @@ export default {
           name: '自开发',
           icon: 'peizhiguanli',
           children: []
+        },
+        {
+          index: 'app',
+          name: '自开发布局',
+          icon: 'yonghuguanli'
         }
       ]
     }

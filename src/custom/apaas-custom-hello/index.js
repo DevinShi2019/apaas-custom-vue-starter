@@ -1,6 +1,7 @@
 import ApaasCustom{{ModuleName}} from './custom-page/page.vue'
 import { customFormComponentList } from './custom-component/form-component'
 import { widgetConfigList } from './custom-component/form-config'
+import ApaasCustomLayout from './custom-layout/custom-layout.vue'
 
 const install = function(Vue, opts) {
   // 安装{{ModuleName}}模块, 此处的和apaas.json定义的路由，必须一致
@@ -24,6 +25,15 @@ const install = function(Vue, opts) {
       }
       Vue.FormEngine && Vue.FormEngine.registerCustomComponentConfig(compConfig)
     })
+  }
+
+  // 安装自定义布局组件
+  // 注册自定义布局组件
+  if (Vue.LayoutEngine) {
+    const layoutEngine = Vue.LayoutEngine.getInstance(Vue.LayoutEngine.currentLayoutId)
+    layoutEngine.registerLayoutComponent(ApaasCustomLayout)
+    // 开启路由缓存
+    layoutEngine.layoutConfig.keepAliveRouter = true
   }
 }
 

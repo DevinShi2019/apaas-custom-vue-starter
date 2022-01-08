@@ -12,6 +12,9 @@
     "cm": "git-cz"
   },
   "dependencies": {
+    "@x-ui/x-dcloud-ui": "^0.2.1",
+    "@x-apaas/x-dcloud-page-web": "^0.13.0-rc.8",
+    "@x-apaas/x-dcloud-page-engine": "^0.12.0-rc.10",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.27",
     "element-ui": "^2.13.2",
@@ -24,7 +27,7 @@
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3",
     "vuex-persist": "^2.2.0",
-    "@x-ui/x-dcloud-ui": "^0.2.1"
+    "x-extension": "^0.2.2"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.8.7",
