@@ -10,13 +10,6 @@
       }
     }
   },
-  "layout": [
-    {
-      "code": "apaas-custom-layout",
-      "desc": "这个自开发布局的描述",
-      "status": "DISABLED"
-    }
-  ],
   "customWidgetList": [
     {
       "code": "{{moduleName}}",
