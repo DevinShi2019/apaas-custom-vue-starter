@@ -91,6 +91,12 @@ export default {
           children: []
         },
         {
+          index: 'config-zikaifa-list-view',
+          name: '自开发列表视图',
+          icon: 'peizhiguanli',
+          children: []
+        },
+        {
           index: 'app',
           name: '自开发布局',
           icon: 'yonghuguanli'
@@ -100,7 +106,8 @@ export default {
   },
   computed: {
     ...mapGetters('menuModule', {
-      customMenuList: 'customMenuList'
+      customMenuList: 'customMenuList',
+      customListViewList: 'customListViewList'
     })
   },
   watch: {
@@ -117,6 +124,9 @@ export default {
       if (menu.index === 'config-zikaifa') {
         menu.children = [...this.customMenuList]
       }
+      if (menu.index === 'config-zikaifa-list-view') {
+        menu.children = [...this.customListViewList]
+      }
     })
   },
   methods: {
@@ -124,7 +134,13 @@ export default {
       this.$router.push({ name: 'workbench' })
     },
     handleSelect(index) {
-      this.$router.push({ name: index, query: { t: new Date().getTime() } })
+      if (!index.includes('app-list-view')) {
+        this.$router.push({ name: index, query: { t: new Date().getTime() } })
+      } else {
+        const menuIndex = parseInt(index.replace('app-list-view', ''))
+        const menuConfig = this.customListViewList[menuIndex]
+        this.$router.push({ name: 'app-list-view', query: { t: new Date().getTime(), componentName: menuConfig.name, renderLogic: menuConfig.renderLogic } })
+      }
     },
     handleMenuCollapse() {
       this.isCollapse = !this.isCollapse

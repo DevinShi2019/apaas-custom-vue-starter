@@ -27,4 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
+.admin {
+  height: 100%;
+  .admin__container {
+    height: 100%;
+  }
+}
 </style>

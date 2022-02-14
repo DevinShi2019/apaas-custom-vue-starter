@@ -7,6 +7,7 @@ import userRole from './user-role/user-role.vue'
 import admin from '@/pages/admin/admin.vue'
 import AppEngineHome from './app-engine-home/app-engine-home.vue'
 import AppEnginePage from './app-engine-home/app-engine-page/app-engine-page.vue'
+import AppListView from './app-list-view/app-list-view.vue'
 
 export default {
   path: '/admin',
@@ -58,6 +59,14 @@ export default {
       path: 'user-role',
       name: 'user-role',
       component: userRole,
+      meta: {
+        layout: 'DefaultLayout'
+      }
+    },
+    {
+      path: 'app-list-view',
+      name: 'app-list-view',
+      component: AppListView,
       meta: {
         layout: 'DefaultLayout'
       }

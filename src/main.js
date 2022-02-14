@@ -21,6 +21,7 @@ import '@/router/auth.guard'
 import './icons' // icon
 import './plugins'
 import './vendor/x-dcloud-layout-engine/x-dcloud-layout-engine'
+import './vendor/x-dcloud-list-engine/x-dcloud-list-engine'
 
 Vue.prototype.$envUrl = function(url) {
   return `${process.env.VUE_APP_PUBLIC_PATH}${url}`
@@ -47,15 +48,33 @@ requireContext.keys().map(key => {
     // 动态添加路由
     const r = router
 
-    Object.keys(rc.router).forEach(key => {
-      const routerConfig = rc.router[key]
-      store.commit('menuModule/ADD_CUSTOM_MENU_ROUTER', routerConfig)
-      r.addRoute('admin', {
-        name: routerConfig.name,
-        path: routerConfig.path,
-        component: Vue.component(key)
+    if (rc.router) {
+      Object.keys(rc.router).forEach(key => {
+        const routerConfig = rc.router[key]
+        store.commit('menuModule/ADD_CUSTOM_MENU_ROUTER', routerConfig)
+        r.addRoute('admin', {
+          name: routerConfig.name,
+          path: routerConfig.path,
+          component: Vue.component(key)
+        })
       })
-    })
+    }
+
+    if (rc.list) {
+      Object.keys(rc.list).forEach((key) => {
+        const customListViewMap = store.state.menuModule.customListViewMap || {}
+        const index = Object.keys(customListViewMap).length
+        const routerConfig = {
+          ...rc.list[key],
+          name: 'app-list-view' + index,
+          meta: {
+            title: key
+          },
+          path: 'app-list-view'
+        }
+        store.commit('menuModule/ADD_CUSTOM_LIST_VIEW_ROUTER', routerConfig)
+      })
+    }
 
     // r.addRoute('admin', {
     //   name: router.name,

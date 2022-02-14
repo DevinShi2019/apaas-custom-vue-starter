@@ -11,11 +11,13 @@ import AccountApi from './account'
 import AdminApi from './admin'
 import PersonalApi from './personal'
 import WorkbenchApi from './workbench'
+import AppPage from './app-page'
 
 export default {
   ...CommonApi,
   ...AccountApi,
   ...AdminApi,
   ...PersonalApi,
-  ...WorkbenchApi
+  ...WorkbenchApi,
+  ...AppPage
 }

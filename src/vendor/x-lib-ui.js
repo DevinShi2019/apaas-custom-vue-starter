@@ -56,6 +56,13 @@ import 'xe-utils'
 import VXETable from 'xx-vxe-table'
 import 'xx-vxe-table/lib/style.css'
 
+import XDcloudPageWeb from '@x-apaas/x-dcloud-page-web'
+import AssetsLoader from '@x-apaas/x-dcloud-page-web/lib/assets-loader'
+
+Vue.use(XDcloudPageWeb)
+
+AssetsLoader.requireAllSvg()
+
 Vue.use(VXETable)
 
 // import './form-schema-config/index'

@@ -101,6 +101,7 @@ module.exports = {
       .test(/\.svg$/)
       .include.add(resolve('./src/assets/icon'))
       .add(resolve('./node_modules/@x-ui/x-dcloud-ui/lib/assets/icon'))
+      .add(resolve('./node_modules/@x-apaas/x-dcloud-page-web/lib/assets/icon'))
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')

@@ -43,6 +43,7 @@ Vue.addInterceptorsRequest('REQUEST_PARAMS_INTERCEPTOR', (e) => {
   if (authStore.token) {
     e.headers['xdaptoken'] = authStore.token
   }
+  e.headers['xdaptenantid'] = process.env.VUE_APP_TENANT_ID
 
   return e
 })

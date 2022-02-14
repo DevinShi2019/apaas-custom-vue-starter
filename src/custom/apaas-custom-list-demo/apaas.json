@@ -1,0 +1,12 @@
+{
+  "entry": "index.js",
+  "copyAssets": ["public/custom/apaas-custom-list-demo"],
+  "list": {
+    "apaas-custom-list-view-demo": {
+      "renderLogic": "FORM_LIST_VIEW",
+      "desc": "描述",
+      "status": "ENABLE"
+    }
+  },
+  "outputName": "apaas-custom-list-demo"
+}
