@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@x-ui/x-dcloud-ui": "^0.2.1",
-    "@x-apaas/x-dcloud-page-web": "^0.13.0-rc.8",
-    "@x-apaas/x-dcloud-page-engine": "^0.12.0-rc.10",
+    "@x-apaas/x-dcloud-page-web": "rc",
+    "@x-apaas/x-dcloud-page-engine": "rc",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.27",
     "element-ui": "^2.13.2",
