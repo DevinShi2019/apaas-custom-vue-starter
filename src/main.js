@@ -34,6 +34,7 @@ Vue.config.productionTip = false
  */
 const requireContext = require.context('./custom/', true, /apaas.json$/)
 console.log(requireContext.keys())
+store.state.menuModule.customListViewMap = {}
 
 requireContext.keys().map(key => {
   const rc = requireContext(key)
