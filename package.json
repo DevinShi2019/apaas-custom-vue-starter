@@ -15,6 +15,7 @@
     "@x-ui/x-dcloud-ui": "^0.2.1",
     "@x-apaas/x-dcloud-page-web": "rc",
     "@x-apaas/x-dcloud-page-engine": "rc",
+    "@x-apaas/x-apaas-frontend-i18n": "rc",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.27",
     "element-ui": "^2.13.2",
