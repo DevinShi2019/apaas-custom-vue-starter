@@ -25,7 +25,8 @@ module.exports = {
   transpileDependencies: [
     '@x-ui/x-dcloud-ui',
     '@x-apaas/x-lib-rule-engine',
-    '@x-apaas/x-dcloud-page-web'
+    '@x-apaas/x-dcloud-page-web',
+    'x-extension'
   ],
   runtimeCompiler: true,
   // webpack-dev-server 相关配置
