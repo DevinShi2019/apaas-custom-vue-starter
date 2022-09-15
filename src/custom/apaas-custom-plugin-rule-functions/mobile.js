@@ -1,5 +1,9 @@
 import customFuncs from './custom-functions/index'
 const install = function({ RuleEngine }, hookManager, definition) {
+  if (!RuleEngine) {
+    console.error('x-extension上下文中没有注册RuleEngine, 请检查')
+    return
+  }
   Object.keys(customFuncs).forEach((funcKey) => {
     const func = customFuncs[funcKey]
     if (func && func.name && func.executeFunction && func.executeFunction instanceof Function) {
