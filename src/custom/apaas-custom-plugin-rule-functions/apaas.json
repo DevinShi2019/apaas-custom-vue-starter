@@ -1,0 +1,10 @@
+{
+  "copyAssets": ["public/custom/apaas-custom-plugin-custom-rule"],
+  "code": "PLUGIN_CUSTOM_RULE",
+  "name": "自开发规则",
+  "description": "自开发规则集成",
+  "outputName": "apaas-custom-plugin-custom-rule",
+  "admin": "admin.js",
+  "app": "app.js",
+  "mobile": "mobile.js"
+}
