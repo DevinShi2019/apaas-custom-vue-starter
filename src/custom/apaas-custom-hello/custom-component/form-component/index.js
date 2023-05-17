@@ -7,3 +7,5 @@
  * @FilePath: /apaas-custom-vue-starter/src/custom/apaas-custom-hello/form-component/index.js
  */
 export { default as customFormComponentList } from './form-widget'
+
+export { default as customFormConfigList } from './form-config'
