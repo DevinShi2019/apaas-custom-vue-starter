@@ -28,6 +28,7 @@ Vue.prototype.$envUrl = function(url) {
 }
 
 Vue.config.productionTip = false
+Vue.GLOBAL_ENV = {}
 
 /**
  * 开发用的
