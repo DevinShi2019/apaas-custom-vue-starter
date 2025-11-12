@@ -13,7 +13,11 @@
     "cm": "git-cz"
   },
   "dependencies": {
+    "@x-apaas/x-dcloud-page-web": "4.1.1-20251016.1.8763",
+    "@x-apaas/x-dcloud-page-engine": "4.1.1-20251016.1.8040",
     "@x-ui/x-dcloud-ui": "^0.2.1",
+    "@x-extension/view-constants": "0.0.2",
+    "vue-lazyload": "1.3.3",
     "core-js": "^3.6.4",
     "dayjs": "^1.8.27",
     "element-ui": "^2.13.2",
@@ -83,4 +87,5 @@
     ]
   }
 }
+
 
