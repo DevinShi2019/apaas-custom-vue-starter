@@ -13,8 +13,14 @@
     "cm": "git-cz"
   },
   "dependencies": {
-    "@x-apaas/x-dcloud-page-web": "4.1.1-20251016.1.8763",
+    "@x-apaas/x-apaas-frontend-i18n": "4.1.1-20251016.1.7381",
+    "@x-apaas/x-dcloud-bpm": "4.1.1-20251016.1.6875",
+    "@x-apaas/x-dcloud-business-event": "4.1.1-20251016.1.7883",
+    "@x-apaas/x-dcloud-business-object": "4.1.1-20251016.1.6773",
+    "@x-apaas/x-dcloud-low-code-engine": "4.1.1-20251016.1.6627",
     "@x-apaas/x-dcloud-page-engine": "4.1.1-20251016.1.8040",
+    "@x-apaas/x-dcloud-page-mobile": "4.1.1-20251016.1.7675",
+    "@x-apaas/x-dcloud-page-web": "4.1.1-20251016.1.8763",
     "@x-ui/x-dcloud-ui": "^0.2.1",
     "@x-extension/view-constants": "0.0.2",
     "vue-lazyload": "1.3.3",
