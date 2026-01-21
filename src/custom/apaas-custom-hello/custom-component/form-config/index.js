@@ -7,7 +7,9 @@
  * @FilePath: /apaas-custom-vue-starter/src/custom/apaas-custom-hello/form-config/index.js
  */
 import widgetConfigList from './form-widget'
+import editorConfigList from './form-editor'
 
 export {
-  widgetConfigList
+  widgetConfigList,
+  editorConfigList
 }
